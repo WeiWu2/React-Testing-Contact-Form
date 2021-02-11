@@ -9,15 +9,15 @@ const ContactForm = () => {
   const onSubmit = (data) => {
     setData(data);
   };
-
+ 
   return (
     <div className="App">
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>
           <label htmlFor="firstName">First Name*</label>
           <input
+        
             id="firstName"
-            
             name="firstName"
             placeholder="Edd"
             ref={register({ required: true, maxLength: 3 })}
@@ -30,6 +30,7 @@ const ContactForm = () => {
         <div>
           <label htmlFor="lastName">Last Name*</label>
           <input
+      
             id="lastName"
             type='text'
             name="lastName"
@@ -46,6 +47,7 @@ const ContactForm = () => {
             Email*
           </label>
           <input name="email" 
+          
             type='email'
             id="email"
             placeholder="bluebill1049@hotmail.com"
@@ -70,7 +72,8 @@ const ContactForm = () => {
           </pre>
         )}
 
-        <input type="submit" />
+      
+        <input type="submit"></input>
       </form>
     </div>
   );
